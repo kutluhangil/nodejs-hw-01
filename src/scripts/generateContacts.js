@@ -5,7 +5,7 @@ import { writeContacts } from '../utils/writeContacts.js';
 const generateContacts = async (number) => {
     const existing = await readContacts();
 
-    // Create the requested number of new contacts and merge with existing ones
+    // yeni kişileri oluşturup eskilerle birleştiriyoruz
     const newContacts = Array.from({ length: number }, createFakeContact);
     const updated = [...existing, ...newContacts];
 
